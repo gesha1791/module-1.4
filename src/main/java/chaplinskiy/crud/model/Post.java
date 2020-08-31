@@ -1,18 +1,17 @@
 package chaplinskiy.crud.model;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Post {
     private Long id;
     private String content;
-    private LocalDateTime created;
-    private LocalDateTime updated;
+    private String created;
+    private String updated;
 
     public Post(){
     }
 
-    public Post(String content, LocalDateTime created, LocalDateTime updated) {
+    public Post(Long id, String content, String created, String updated) {
         this.id = id;
         this.content = content;
         this.created = created;
@@ -35,19 +34,19 @@ public class Post {
         this.content = content;
     }
 
-    public LocalDateTime getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(String created) {
         this.created = created;
     }
 
-    public LocalDateTime getUpdated() {
+    public String getUpdated() {
         return updated;
     }
 
-    public void setUpdated(LocalDateTime updated) {
+    public void setUpdated(String updated) {
         this.updated = updated;
     }
 

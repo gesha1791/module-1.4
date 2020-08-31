@@ -1,7 +1,6 @@
 package chaplinskiy.crud.repository.io;
 
 import chaplinskiy.crud.model.Post;
-import chaplinskiy.crud.model.Region;
 import chaplinskiy.crud.repository.PostRepository;
 import com.google.gson.Gson;
 

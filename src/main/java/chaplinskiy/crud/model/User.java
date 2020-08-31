@@ -1,5 +1,6 @@
 package chaplinskiy.crud.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -7,7 +8,7 @@ public class User {
     private Long id;
     private String firstName;
     private String lastName;
-    private List<Post> posts;
+    private List<Post> posts = new ArrayList<>();
 
     private Region region;
 

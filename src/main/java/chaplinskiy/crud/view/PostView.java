@@ -21,8 +21,8 @@ public class PostView {
             s = br.readLine();
             Post post = new Post();
             post.setContent(s);
-            post.setCreated(LocalDateTime.now());
-            post.setUpdated(LocalDateTime.now());
+            post.setCreated(LocalDateTime.now().toString());
+            post.setUpdated(LocalDateTime.now().toString());
             postController.create(post);
 
             System.out.println("Сообщение создано");
@@ -34,7 +34,7 @@ public class PostView {
             System.out.println("Введите новое сообщение для update");
             s = br.readLine();
             byId.setContent(s);
-            byId.setUpdated(LocalDateTime.now());
+            byId.setUpdated(LocalDateTime.now().toString());
             Post updatePost = postController.update(byId);
             System.out.println("Сообщение обновили: " + updatePost.toString());
         }  else if (s.equals("3")) {
