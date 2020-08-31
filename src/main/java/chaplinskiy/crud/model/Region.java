@@ -1,5 +1,7 @@
 package chaplinskiy.crud.model;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.Objects;
 
 public class Region {

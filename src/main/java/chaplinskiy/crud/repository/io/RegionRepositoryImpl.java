@@ -1,6 +1,7 @@
-package chaplinskiy.crud.repository;
+package chaplinskiy.crud.repository.io;
 
 import chaplinskiy.crud.model.Region;
+import chaplinskiy.crud.repository.RegionRepository;
 import com.google.gson.Gson;
 
 import java.io.FileWriter;
@@ -15,7 +16,6 @@ import java.util.stream.Collectors;
 import static java.nio.file.Files.*;
 
 public class RegionRepositoryImpl implements RegionRepository {
-
 
     private final Gson mapper = new Gson();
 

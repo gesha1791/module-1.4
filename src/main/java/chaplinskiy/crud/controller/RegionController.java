@@ -2,7 +2,7 @@ package chaplinskiy.crud.controller;
 
 import chaplinskiy.crud.model.Region;
 import chaplinskiy.crud.repository.RegionRepository;
-import chaplinskiy.crud.repository.RegionRepositoryImpl;
+import chaplinskiy.crud.repository.io.RegionRepositoryImpl;
 
 import java.util.List;
 

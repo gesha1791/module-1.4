@@ -2,7 +2,7 @@ package chaplinskiy.crud.controller;
 
 import chaplinskiy.crud.model.User;
 import chaplinskiy.crud.repository.UserRepository;
-import chaplinskiy.crud.repository.UserRepositoryImpl;
+import chaplinskiy.crud.repository.io.UserRepositoryImpl;
 
 import java.util.List;
 

@@ -10,7 +10,6 @@ public class Post {
     private LocalDateTime updated;
 
     public Post(){
-
     }
 
     public Post(String content, LocalDateTime created, LocalDateTime updated) {

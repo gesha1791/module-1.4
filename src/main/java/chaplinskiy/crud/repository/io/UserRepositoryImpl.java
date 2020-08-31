@@ -1,7 +1,8 @@
-package chaplinskiy.crud.repository;
+package chaplinskiy.crud.repository.io;
 
 import chaplinskiy.crud.model.Region;
 import chaplinskiy.crud.model.User;
+import chaplinskiy.crud.repository.UserRepository;
 import com.google.gson.Gson;
 
 import java.io.FileWriter;
