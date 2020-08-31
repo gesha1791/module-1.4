@@ -1,9 +1,13 @@
 package chaplinskiy.crud.repository.io;
 
+import chaplinskiy.crud.model.Post;
 import chaplinskiy.crud.model.Region;
 import chaplinskiy.crud.model.User;
 import chaplinskiy.crud.repository.UserRepository;
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,8 +22,33 @@ import static java.nio.file.Files.exists;
 import static java.nio.file.Files.readAllLines;
 
 public class UserRepositoryImpl implements UserRepository {
+    ExclusionStrategy strategy = new ExclusionStrategy() {
+        @Override
+        public boolean shouldSkipField(FieldAttributes field) {
+            if (field.getDeclaringClass() == Region.class && field.getName().equals("name")) {
+                return true;
+            }
+            if (field.getDeclaringClass() == Post.class && field.getName().equals("content")) {
+                return true;
+            }
+            if (field.getDeclaringClass() == Post.class && field.getName().equals("created")) {
+                return true;
+            }
+            if (field.getDeclaringClass() == Post.class && field.getName().equals("updated")) {
+                return true;
+            }
+            return false;
+        }
 
-    private final Gson mapper = new Gson();
+        @Override
+        public boolean shouldSkipClass(Class<?> clazz) {
+            return false;
+        }
+    };
+
+    private final Gson mapper = new GsonBuilder()
+            .addSerializationExclusionStrategy(strategy)
+            .create();
 
     @Override
     public User create(User user) {
